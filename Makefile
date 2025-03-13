@@ -1,4 +1,4 @@
-PROJECT := preprocessing-base
+PROJECT := preprocessing-msf
 MAKEDIR := hack/make
 SHELL   := /bin/bash
 
@@ -39,7 +39,7 @@ define NEWLINE
 endef
 
 IGNORED_PACKAGES := \
-	github.com/artefactual-sdps/preprocessing-base/hack/% \
+	github.com/artefactual-sdps/preprocessing-msf/hack/% \
 	github.com/artefactual-sdps/preprocessing-sfa/internal/enums
 PACKAGES := $(shell go list ./...)
 TEST_PACKAGES := $(filter-out $(IGNORED_PACKAGES),$(PACKAGES))

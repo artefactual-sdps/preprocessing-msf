@@ -12,10 +12,10 @@ import (
 	temporalsdk_testsuite "go.temporal.io/sdk/testsuite"
 	temporalsdk_worker "go.temporal.io/sdk/worker"
 
-	"github.com/artefactual-sdps/preprocessing-base/internal/config"
-	"github.com/artefactual-sdps/preprocessing-base/internal/enums"
-	"github.com/artefactual-sdps/preprocessing-base/internal/eventlog"
-	"github.com/artefactual-sdps/preprocessing-base/internal/workflow"
+	"github.com/artefactual-sdps/preprocessing-msf/internal/config"
+	"github.com/artefactual-sdps/preprocessing-msf/internal/enums"
+	"github.com/artefactual-sdps/preprocessing-msf/internal/eventlog"
+	"github.com/artefactual-sdps/preprocessing-msf/internal/workflow"
 )
 
 const sharedPath = "/shared/path/"

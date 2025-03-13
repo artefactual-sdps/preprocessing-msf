@@ -1,37 +1,12 @@
-# preprocessing-base
+# Preprocessing-msf
 
-Enduro preprocessing child workflow base repository. This project is a basic
-example and a template to be used to create new preprocessing child workflows
-to be executed as part of the processing workflow in Enduro.
+preprocessing-msf is an Enduro preprocessing workflow for: MSF - Médecins Sans Frontières.
+It verifies that all files in the SIP are in the allowed list.
 
-- [Existing repositories](#existing-repositories)
-- [Create a new repository](#create-a-new-repository)
 - [Repository requirements](#repository-requirements)
 - [Configuration](#configuration)
 - [Local environment](#local-environment)
 - [Makefile](#makefile)
-
-## Existing repositories
-
-- [preprocessing-sfa](https://github.com/artefactual-sdps/preprocessing-sfa)
-- [preprocessing-moma](https://github.com/artefactual-sdps/preprocessing-moma)
-
-## Create a new repository
-
-To create a new preprocessing child workflow project:
-
-- Use this repository as a template:
-  - With the link in the top right corner of this page
-  - Or selecting it from the create new repository template dropdown
-- Replace references to `preprocessing-base` in the code, this will change:
-  - The Go module name
-  - The default Docker image name
-  - The Makefile project name and the location of the installed tools
-  - The `appName` in the worker command
-- Update this readme file:
-  - Change the heading and initial description
-  - Remove the first three sections from the list above and the content
-  - Update the configuration based on the workflow implementation
 
 ## Repository requirements
 
@@ -153,8 +128,8 @@ Clone this repository and move into its folder if you have not done that
 previously:
 
 ```bash
-git clone git@github.com:artefactual-sdps/preprocessing-base.git
-cd preprocessing-base
+git clone git@github.com:artefactual-sdps/preprocessing-msf.git
+cd preprocessing-msf
 ```
 
 Bring up the environment:
