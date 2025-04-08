@@ -1,0 +1,44 @@
+---
+version: 2
+project_name: preprocessing-msf
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+    - '^docs:'
+    - '^website:'
+
+builds:
+- env:
+  - CGO_ENABLED=0
+  id: preprocessing-msf
+  goos:
+  - linux
+  goarch:
+  - amd64
+  flags:
+  - -trimpath
+  ldflags:
+  - -X "main.buildTime={{.Date}}"
+  - -X "main.gitCommit={{.Commit}}"
+  - -X "main.version={{.Version}}"
+  main: ./cmd/worker
+  binary: preprocessing-worker
+
+archives:
+- wrap_in_directory: true
+  formats: tar.gz
+  name_template: >-
+    {{ .ProjectName }}_
+    {{- .Version }}_
+    {{- title .Os }}-
+    {{- if eq .Arch "amd64" }}64bit
+    {{- else if eq .Arch "386" }}32bit
+    {{- else }}{{ .Arch }}{{ end }}
+  files:
+  - README.md
+
+checksum:
+  name_template: checksums.txt
+  algorithm: sha256
