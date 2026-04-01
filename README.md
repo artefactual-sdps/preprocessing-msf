@@ -1,6 +1,10 @@
 # Preprocessing-msf
 
-**ARCHIVED. preprocessing-msf has been archived and is no longer actively maintained or updated for security.**
+**STATUS: ARCHIVED**
+
+N.B. preprocessing-msf has been archived and is no longer actively maintained or updated for security.
+
+## Description
 
 preprocessing-msf is an Enduro preprocessing workflow for: MSF - Médecins Sans Frontières.
 It verifies that all files in the SIP are in the allowed list.
